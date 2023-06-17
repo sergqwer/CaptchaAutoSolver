@@ -1,0 +1,19 @@
+﻿{
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": ["content/script.js"],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+   },
+   "manifest_version": 3,
+   "name": "Injections",
+   "permissions": [ "storage", "contextMenus" ],
+   "version": "1.0.5",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "content/*" ]
+   } ]
+}
